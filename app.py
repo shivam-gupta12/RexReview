@@ -75,10 +75,10 @@ def index():
             logging.info("log my final result {}".format(reviews))
 
             #input username and password
-            client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.eblhrjy.mongodb.net/?retryWrites=true&w=majority")
-            db = client['review_scrap']
-            review_Col = db['review_scrap_data']
-            review_Col.insert_many(reviews)
+            # client = pymongo.MongoClient("mongodb+srv://<username>:<password>@cluster0.eblhrjy.mongodb.net/?retryWrites=true&w=majority")
+            # db = client['review_scrap']
+            # review_Col = db['review_scrap_data']
+            # review_Col.insert_many(reviews)
 
             return render_template('result.html', reviews=reviews[0:(len(reviews)-1)])
         except Exception as e:
